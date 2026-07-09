@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "salesagent"
+version = "1.0.0"
+description = "C1/C2 discovery + validation agent for Ontario cabinetry ICP"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["salesagent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

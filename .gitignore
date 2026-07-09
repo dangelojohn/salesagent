@@ -1,0 +1,11 @@
+# virtual environments
+.venv/
+venv/
+env/
+
+# python bytecode
+__pycache__/
+*.pyc
+
+# runtime audit / suppression artifacts
+*.jsonl

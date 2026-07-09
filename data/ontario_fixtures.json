@@ -1,0 +1,194 @@
+{
+  "on-cab-0001": {
+    "company": "Greystone Custom Cabinets Inc.",
+    "employees": 28,
+    "places": {
+      "url": "https://maps.google.com/?cid=greystone",
+      "types": ["general_contractor", "manufacturer", "establishment"],
+      "rating_count": 75, "velocity": 2.4, "opens_before_0730": true,
+      "industrial_address": true, "phone": "+1 705-719-2544",
+      "address": "234 Lockhart Rd Unit 6, Barrie, ON"
+    },
+    "website": {
+      "url": "https://greystonecabinets.example/about",
+      "text": "Our Barrie shop runs a Biesse Rover CNC machining centre for nested-based manufacturing. All casework is designed in Cabinet Vision and computer-cut to spec."
+    },
+    "jobs": [
+      {"title": "Estimator / Quoting Coordinator", "url": "https://jobbank.example/1",
+       "body": "Preparing quotes for custom cabinetry projects. Must be proficient in Excel and QuickBooks. Reports to the owner."},
+      {"title": "CNC Operator", "url": "https://jobbank.example/2",
+       "body": "Operate our Biesse router. Nesting experience required."}
+    ],
+    "reviews": [
+      {"text": "Great craftsmanship but the install ran two months late and nobody returned my calls for weeks.", "url": "https://maps.google.com/review/g1"}
+    ],
+    "ppsa": [
+      {"collateral": "One (1) Biesse Rover CNC machining centre, serial 88214",
+       "url": "https://ppsa.ontario.example/reg/44821", "months_ago": 7}
+    ],
+    "registry": {"incorporated": "2006-03-14", "url": "https://obr.ontario.example/greystone", "domicile_country": "CA"},
+    "dealer": [
+      {"kind": "showcase", "url": "https://akhurst.example/customers",
+       "page_text": "Congratulations to Greystone Custom Cabinets Inc. on their new Biesse Rover installation."}
+    ],
+    "trigger": {"type": "estimator_posting", "detected": "2026-07-02", "expires": "2026-07-30"},
+    "contact": {"owner_name": "Pat Noonan", "owner_source": "team_page",
+                "business_email": "info@greystonecabinets.example"}
+  },
+
+  "on-cab-0002": {
+    "company": "Northline Millwork Group",
+    "employees": 44,
+    "places": {
+      "url": "https://maps.google.com/?cid=northline",
+      "types": ["manufacturer", "establishment"],
+      "rating_count": 31, "velocity": 1.1, "opens_before_0730": true,
+      "industrial_address": true, "phone": "+1 905-555-0147",
+      "address": "18 Industrial Pkwy, Aurora, ON"
+    },
+    "website": {
+      "url": "https://northlinemillwork.example",
+      "text": "Precision-machined architectural millwork. Our Homag CNC cells run drawings authored in Microvellum."
+    },
+    "jobs": [
+      {"title": "Production Scheduler", "url": "https://indeed.example/9",
+       "body": "Coordinate shop floor scheduling across three CNC cells. Spreadsheets used today; INNERGY rollout planned."}
+    ],
+    "reviews": [],
+    "ppsa": [],
+    "registry": {"incorporated": "2011-09-01", "url": "https://obr.ontario.example/northline", "domicile_country": "CA"},
+    "dealer": [],
+    "trigger": null,
+    "contact": {}
+  },
+
+  "on-cab-0003": {
+    "company": "Lakeside Cabinet Co.",
+    "employees": 22,
+    "locality": {"operating_country": "CA", "province": "ON", "domicile_country": "US", "data_region": "ca-central"},
+    "places": {
+      "url": "https://maps.google.com/?cid=lakeside",
+      "types": ["manufacturer", "establishment"],
+      "rating_count": 40, "velocity": 2.2, "opens_before_0730": true,
+      "industrial_address": true, "phone": "+1 519-555-0188",
+      "address": "900 Sarnia Rd, London, ON"
+    },
+    "website": {
+      "url": "https://lakesidecabinet.example",
+      "text": "Michigan-founded, now serving Ontario. Our SCM Morbidelli router and Mozaik-driven cut lists deliver computer-cut precision."
+    },
+    "jobs": [
+      {"title": "Shop Estimator", "url": "https://indeed.example/22",
+       "body": "Quote cross-border projects. Advanced Excel required; we track everything in spreadsheets today."}
+    ],
+    "reviews": [
+      {"text": "Beautiful cabinets, but delivery was delayed and the dimensions were not per the drawing.", "url": "https://houzz.example/r/ls"}
+    ],
+    "ppsa": [
+      {"collateral": "SCM Morbidelli CNC router", "url": "https://ppsa.ontario.example/reg/55190", "months_ago": 14}
+    ],
+    "registry": {"incorporated": "2015-05-20", "url": "https://obr.ontario.example/lakeside-extra-provincial", "domicile_country": "US"},
+    "dealer": [],
+    "trigger": {"type": "cnc_lien_under_6mo", "detected": "2026-06-20"},
+    "contact": {"owner_name": "—", "owner_source": "company_website",
+                "business_email": "sales@lakesidecabinet.example"}
+  },
+
+  "on-cab-0004": {
+    "company": "Precision Kitchen Systems",
+    "employees": 35,
+    "places": {
+      "url": "https://maps.google.com/?cid=precision",
+      "types": ["manufacturer", "establishment"],
+      "rating_count": 58, "velocity": 1.0, "opens_before_0730": true,
+      "industrial_address": true, "phone": "+1 416-555-0123",
+      "address": "77 Arrow Rd, North York, ON"
+    },
+    "website": {
+      "url": "https://precisionkitchen.example",
+      "text": "Nested-based manufacturing on a Biesse Rover. Fully integrated shop running Cyncly Insight from bid to install."
+    },
+    "jobs": [],
+    "reviews": [],
+    "ppsa": [],
+    "registry": {"incorporated": "2003-01-10", "url": "https://obr.ontario.example/precision", "domicile_country": "CA"},
+    "dealer": [],
+    "trigger": null,
+    "contact": {}
+  },
+
+  "on-cab-0005": {
+    "company": "Bay Street Kitchen Gallery",
+    "employees": 5,
+    "places": {
+      "url": "https://maps.google.com/?cid=baystreet",
+      "types": ["store", "home_goods_store", "establishment"],
+      "rating_count": 120, "velocity": 1.3, "opens_before_0730": false,
+      "industrial_address": false, "phone": "+1 416-555-0199",
+      "address": "1400 Bay St, Toronto, ON"
+    },
+    "website": {
+      "url": "https://baystreetkitchens.example",
+      "text": "Toronto's premier kitchen showroom. Designs rendered in 2020 Design."
+    },
+    "jobs": [],
+    "reviews": [],
+    "ppsa": [],
+    "registry": {},
+    "dealer": [],
+    "trigger": null,
+    "contact": {}
+  },
+
+  "on-cab-0006": {
+    "company": "Hollow Pine Woodworks",
+    "employees": 4,
+    "places": {
+      "url": "https://maps.google.com/?cid=hollowpine",
+      "types": ["manufacturer", "establishment"],
+      "rating_count": 22, "velocity": 1.6, "opens_before_0730": true,
+      "industrial_address": false, "phone": "+1 705-555-0166",
+      "address": "RR#2, Erin, ON"
+    },
+    "website": {
+      "url": "https://hollowpine.example",
+      "text": "Small-batch custom furniture cut on our ShopBot CNC. Toolpaths in VCarve."
+    },
+    "jobs": [],
+    "reviews": [],
+    "ppsa": [],
+    "registry": {},
+    "dealer": [],
+    "trigger": null,
+    "contact": {}
+  },
+
+  "on-cab-0007": {
+    "company": "Grand River Cabinetry",
+    "employees": 19,
+    "places": {
+      "url": "https://maps.google.com/?cid=grandriver",
+      "types": ["manufacturer", "establishment"],
+      "rating_count": 47, "velocity": 2.6, "opens_before_0730": true,
+      "industrial_address": true, "phone": "+1 519-555-0121",
+      "address": "12 Clyde Rd, Cambridge, ON"
+    },
+    "website": {
+      "url": "https://grandrivercab.example",
+      "text": "Custom kitchens, computer-cut on our Felder Format-4 router. Shop drawings from KCDw."
+    },
+    "jobs": [
+      {"title": "Shop Foreman", "url": "https://indeed.example/31",
+       "body": "Lead the production floor. Comfortable with spreadsheets."}
+    ],
+    "reviews": [],
+    "ppsa": [],
+    "registry": {"incorporated": "2014-07-02", "url": "https://obr.ontario.example/grandriver", "domicile_country": "CA"},
+    "dealer": [
+      {"kind": "erp_vendor_case_study", "url": "https://innergy.example/customers/grand-river",
+       "page_text": "How Grand River Cabinetry cut lead times 30% with INNERGY ERP."}
+    ],
+    "trigger": null,
+    "contact": {}
+  }
+}
