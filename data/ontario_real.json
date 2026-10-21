@@ -1,0 +1,232 @@
+{
+  "on-cab-r001": {
+    "company": "Deslaurier Custom Cabinets Inc.",
+    "places": {
+      "url": "https://www.bbb.org/ca/on/renfrew/profile/cabinet-manufacturers/deslaurier-custom-cabinets-inc-0117-4057",
+      "types": ["manufacturer", "establishment"],
+      "rating_count": 49,
+      "opens_before_0730": false,
+      "industrial_address": true,
+      "address": "550 Hall Ave E, Renfrew, ON K7V 2S9"
+    },
+    "website": {
+      "url": "https://www.deslaurier.com/en-ca/about",
+      "text": "Our local, state-of-the-art manufacturing facility allows us to control the quality and delivery timeframe of your cabinets. When a fire destroyed our plant in 2009, Deslaurier rebuilt a state-of-the-art green manufacturing facility in Renfrew Ontario."
+    },
+    "jobs": [
+      {"title": "Woodworking machine operators supervisor - furniture and fixtures manufacturing",
+       "url": "https://www.jobbank.gc.ca/jobsearch/jobposting/49527705",
+       "body": "Resolve work problems, provide technical advice and recommend measures to improve productivity and product quality. Establish work schedules. Train or arrange for training. Supervise, co-ordinate and schedule activities of workers."},
+      {"title": "Data Processing Control Clerk",
+       "url": "https://www.jobbank.gc.ca/jobsearch/jobposting/49527706",
+       "body": "Receive and register documents for data entry. Transfer handwritten data to Excel or Word documents. Prepare bills of lading, invoices and other shipping documents. Co-ordinate activities with warehouse and production units. Computer and technology knowledge: MS Excel. MS Word. SAP (FI/CO / HR / MM / OT SD)."}
+    ],
+    "reviews": [
+      {"text": "the installation has been a complete mess...all the drawers were left in piles on our floor...NONE of them fit. Other specifications outlined in the detailed plans were also not done.",
+       "url": "https://reviews.birdeye.com/deslaurier-custom-cabinets-157365460718885"}
+    ],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  },
+
+  "on-cab-r002": {
+    "company": "Laurysen Kitchens Ltd.",
+    "employees": 140,
+    "places": {
+      "url": "https://www.bbb.org/ca/on/stittsville/profile/cabinet-manufacturers/laurysen-kitchens-ltd-0117-630",
+      "types": ["manufacturer", "establishment"],
+      "opens_before_0730": true,
+      "industrial_address": true,
+      "address": "7 Industrial Avenue, Carleton Place, ON K7C 3V7"
+    },
+    "website": {
+      "url": "https://www.laurysenkitchens.com/the-laurysen-edge/the-laurysen-story/",
+      "text": "Our 110,000-square-foot manufacturing facility in Carleton Place, Ontario is so efficient it even lets us recycle our sawdust. Over 140 people build custom cabinetry here."
+    },
+    "jobs": [
+      {"title": "5 Ton Truck Driver",
+       "url": "https://www.laurysenkitchens.com/careers/positions/driver-5-ton-truck-driver/",
+       "body": "Location: 7 Industrial Ave. Carleton Place. Hours: Mon to Thurs 7:00 a.m. - 4:00 p.m., Fri 7:00 a.m. - 3:00 p.m. Compensation CA$23.00-CA$28.00 per hour, commensurate with experience and qualifications."}
+    ],
+    "reviews": [],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  },
+
+  "on-cab-r003": {
+    "company": "Chervin Kitchen & Bath",
+    "employees": 200,
+    "places": {
+      "url": "https://www.chervin.ca/site/contact-waterloo-head-office",
+      "types": ["manufacturer", "establishment"],
+      "opens_before_0730": false,
+      "industrial_address": true,
+      "address": "3541 Broadway Street, Hawkesville, ON N0B 1X0"
+    },
+    "website": {
+      "url": "https://trilliummfg.ca/profile/chervin-kitchen-bath/",
+      "text": "In order to serve its customers effectively Chervin moves in the direction of Industry 4.0; to do this, it purchases machinery from Biesse, a prominent supplier of woodworking automation technology. Other machines include automated sawing systems, drilling systems, and edgebanders. Since 2005, Planit Canada has implemented 35 Cabinet Vision licenses in Chervin's shops running CV modules Solid Ultimate and S2M Ultimate."
+    },
+    "jobs": [],
+    "reviews": [],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  },
+
+  "on-cab-r004": {
+    "company": "AyA Kitchens and Baths Ltd.",
+    "employees": 139,
+    "places": {
+      "url": "https://www.ayakitchens.com/company/about/manufacturing_quality.html",
+      "types": ["manufacturer", "establishment"],
+      "opens_before_0730": false,
+      "industrial_address": true,
+      "address": "1551 Caterpillar Rd, Mississauga, ON L4X 2Z6"
+    },
+    "website": {
+      "url": "https://www.ayakitchens.com/company/about/overview.html",
+      "text": "You get the best of both worlds - the personalization of a custom kitchen with the value and quality that comes from a 150,000 sq. ft. state-of-the-art production facility."
+    },
+    "jobs": [
+      {"title": "Retail Business Development Supervisor",
+       "url": "https://www.ayakitchens.com/company/inquiries/career.html",
+       "body": "AyA is seeking an experienced Retail Business Development Supervisor to strategically expand the retail business and enhance overall performance of our Designer/Sales Representative team. Monthly sales and forecasting reports. Knowledge of Microsoft office."}
+    ],
+    "reviews": [
+      {"text": "I love the finished kitchen that I purchased from Aya Kitchens but found the process to be slow and unprofessional. I had multiple delays, delays in being able to make payments which delayed manufacture start dates, and delays in installation date. In the end my kitchen cabinet delivery was not until October 28th - 15 weeks after I started the process!",
+       "url": "https://www.bestprosintown.com/on/mississauga/aya-kitchens-and-baths-/"}
+    ],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  },
+
+  "on-cab-r005": {
+    "company": "Cartier Kitchens",
+    "employees": 54,
+    "places": {
+      "url": "https://www.bbb.org/ca/on/brampton/profile/kitchen-cabinets-and-equipment/cartier-kitchens-0107-1148850",
+      "types": ["manufacturer", "establishment"],
+      "opens_before_0730": false,
+      "industrial_address": true,
+      "address": "8 Chelsea Lane, Brampton, ON L6T 3Y4"
+    },
+    "website": {
+      "url": "https://ca.indeed.com/cmp/Cartier-Kitchens/reviews",
+      "text": "Working as machine operator (Panel cutter and CNC Router) at Cartier Kitchens in Brampton. The plant runs a nested-based CNC router and panel saw."
+    },
+    "jobs": [],
+    "reviews": [
+      {"text": "The job was left incomplete despite clear agreements on timelines, with poor workmanship that fails even the most basic standards.",
+       "url": "https://www.bbb.org/ca/on/brampton/profile/kitchen-cabinets-and-equipment/cartier-kitchens-0107-1148850"}
+    ],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  },
+
+  "on-cab-r006": {
+    "company": "Downsview Kitchens",
+    "employees": 200,
+    "places": {
+      "url": "https://downsviewkitchens.com/about/",
+      "types": ["manufacturer", "establishment"],
+      "opens_before_0730": false,
+      "industrial_address": true,
+      "address": "2635 Rena Road, Mississauga, ON L4T 1G6"
+    },
+    "website": {
+      "url": "https://downsviewkitchens.com/about/",
+      "text": "In our 110,000 square foot building we do everything from cutting and sanding to spray painting and installing. Automated computerized machinery has never taken priority over the hand of the craftsman."
+    },
+    "jobs": [],
+    "reviews": [],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  },
+
+  "on-cab-r007": {
+    "company": "Muti Kitchen & Bath Inc",
+    "employees": 22,
+    "places": {
+      "url": "https://ca.linkedin.com/company/muti-kitchen-and-bath",
+      "types": ["store", "home_goods_store", "establishment"],
+      "opens_before_0730": false,
+      "industrial_address": false,
+      "address": "143 Tycos Drive, Toronto, ON M6B 1W6"
+    },
+    "website": {
+      "url": "https://www.mutikb.com/about-muti/",
+      "text": "Ontario's Premier Kitchen Designer and Manufacturer. Made to Measure, Made in Italy. Visit our 12,000-square-foot flagship showroom in Toronto or our 10,000-square-foot showroom in Oakville."
+    },
+    "jobs": [],
+    "reviews": [
+      {"text": "During the installation phase, we found that certain items were manufactured differently then shown on drawings we signed off on. Items were also missing from the order and other items were damaged during transit from Italy or the warehouse.",
+       "url": "http://web.archive.org/web/20240303230336/https://homestars.com/companies/2777630-muti-kitchen-bath-inc"}
+    ],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  },
+
+  "on-cab-r008": {
+    "company": "Magnum Kitchens",
+    "employees": 5,
+    "places": {
+      "url": "https://ckca.ca/directory/magnum-kitchens/",
+      "types": ["manufacturer", "establishment"],
+      "rating_count": 55,
+      "opens_before_0730": false,
+      "industrial_address": true,
+      "address": "1885 Drew Road Unit 6/7, Mississauga, ON L5S 1J5"
+    },
+    "website": {
+      "url": "https://magnumkitchens.ca/",
+      "text": "We provide high quality custom cabinetry made in house using Canadian materials."
+    },
+    "jobs": [
+      {"title": "cabinetmakers foreman/woman",
+       "url": "https://www.jobbank.gc.ca/jobsearch/jobposting/49368623",
+       "body": "Prepare bids. Manage own company. Estimate costs and materials. Operate CADD and other computer software systems. Set up equipment. Prepare production and other reports. Co-ordinate and schedule activities. Establish methods to meet work schedules. Requisition materials and supplies."}
+    ],
+    "reviews": [],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  },
+
+  "on-cab-r009": {
+    "company": "Bloomsbury Fine Cabinetry Inc.",
+    "employees": 40,
+    "places": {
+      "url": "https://www.bloomsburykitchens.com/contact",
+      "types": ["manufacturer", "establishment"],
+      "opens_before_0730": false,
+      "industrial_address": true,
+      "address": "415 Harry Walker Parkway North Unit 4, Newmarket, ON L3Y 8T9"
+    },
+    "website": {
+      "url": "https://www.bloomsburykitchens.com/bloomsbury-difference",
+      "text": "Handmade in Ontario, Canada. We design, build and install the custom cabinetry we make, in our own quality-controlled workshop. All our custom cabinetry is made from North American Birch Plywood lumber."
+    },
+    "jobs": [
+      {"title": "Cabinetmaker",
+       "url": "https://www.bloomsburykitchens.com/careers1",
+       "body": "3-5 years of cabinetmaking industry experience. Strong knowledge of materials, methods and tools involved in millwork fabrication."},
+      {"title": "Designer & Project Manager",
+       "url": "https://www.bloomsburykitchens.com/careers1",
+       "body": "4-6 years of kitchen design industry experience. Must be proficient in AutoCAD, CabinetVision, 2020 Technologies, or similar."}
+    ],
+    "reviews": [],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  },
+
+  "on-cab-r010": {
+    "company": "Tuscan Woodworks Inc.",
+    "places": {
+      "url": "https://taggroup.ca/divisons",
+      "types": ["manufacturer", "establishment"],
+      "industrial_address": true,
+      "address": "2901 Steeles Avenue West Unit 6, North York, ON M3J 3A5"
+    },
+    "website": {
+      "url": "https://taggroup.ca/divisons",
+      "text": "Tuscan Woodworks produces specialty millwork for unique custom projects with an in house design and fabrication team."
+    },
+    "jobs": [
+      {"title": "Cabinetmaker",
+       "url": "https://www.jobbank.gc.ca/jobsearch/jobposting/49859515",
+       "body": "Operate woodworking machines, such as power saws, jointers, mortisers and shapers, to cut, shape and form parts and components. Prepare specifications of custom-made cabinets that maximize storage. Study plans, specifications or drawings of articles to be made. Operate CADD and other computer software systems. Trim joints and fit parts and subassemblies together to form complete unit and reinforce joints. Estimate costs and materials."}
+    ],
+    "reviews": [],
+    "ppsa": [], "dealer": [], "trigger": null, "contact": {}
+  }
+}

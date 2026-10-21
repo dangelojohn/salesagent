@@ -19,6 +19,12 @@ from .adapters import (
     TriggerFeedAdapter,
     WebsiteAdapter,
 )
+from .jobbank import (
+    JobBankFetcher,
+    JobBoardBlocked,
+    JobBoardError,
+    JobBoardUnavailable,
+)
 
 __all__ = [
     "PlacesAdapter",
@@ -31,4 +37,9 @@ __all__ = [
     "DealerShowcaseAdapter",
     "TriggerFeedAdapter",
     "ContactResolverAdapter",
+    # live sources
+    "JobBankFetcher",
+    "JobBoardBlocked",
+    "JobBoardError",
+    "JobBoardUnavailable",
 ]

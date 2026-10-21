@@ -10,6 +10,7 @@ crawlers and this runs unchanged -- that's the point of the adapter protocol.
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 from salesagent import (
@@ -22,36 +23,71 @@ from salesagent.sources import (
     PPSAAdapter, PlacesAdapter, RegistryAdapter, ReviewAdapter,
     TriggerFeedAdapter, WebsiteAdapter,
 )
+from salesagent.sources.jobbank import JobBankFetcher
 from salesagent.models import Stage
 
-FIXTURES = json.loads((Path(__file__).parent / "data" / "ontario_fixtures.json").read_text())
+
+def _jobs_fetch(fixture_fetch, live: bool = False):
+    """The JobBoardAdapter fetch callable.
+
+    Live Job Bank Canada fetcher when ``live`` is True; otherwise the
+    deterministic fixture fetch. Only the job board is wired to a live source
+    (highest-confidence signal, c=0.35). ``live`` is resolved once, in
+    build_pipeline, so callers that need reproducibility (calibrate.py) can
+    force it off regardless of the environment.
+    """
+    if live:
+        return JobBankFetcher(province="Ontario")
+    return fixture_fetch
+
+FIXTURES_PATH = Path(__file__).parent / "data" / "ontario_fixtures.json"
 
 
-def f(section: str):
-    """Fixture fetcher bound to a section of the fixture file."""
-    def _fetch(p: Prospect):
-        return FIXTURES.get(p.prospect_id, {}).get(section)
-    return _fetch
+def load_fixtures(path=FIXTURES_PATH) -> dict:
+    return json.loads(Path(path).read_text())
 
 
-def build_pipeline() -> Pipeline:
+FIXTURES = load_fixtures()
+
+
+def build_pipeline(fixtures: dict | None = None,
+                   live_jobs: bool | None = None) -> Pipeline:
+    """Assemble the S0-S4 pipeline over a fixture set.
+
+    Defaults to the shipped demo fixtures; pass another dict (e.g. the real
+    Ontario corpus) to run the same pipeline over different seeds.
+
+    live_jobs: None -> resolve from SALESAGENT_LIVE_JOBS (opt-in); True/False
+    forces the job board on/off explicitly (calibrate.py passes False so it is
+    always offline and reproducible).
+    """
+    fixtures = FIXTURES if fixtures is None else fixtures
+    if live_jobs is None:
+        live_jobs = bool(os.environ.get("SALESAGENT_LIVE_JOBS"))
+
+    def f(section: str):
+        """Fixture fetcher bound to a section of the fixture file."""
+        def _fetch(p: Prospect):
+            return fixtures.get(p.prospect_id, {}).get(section)
+        return _fetch
+
     seeds = [
         Prospect(
             prospect_id=pid,
             company=d["company"],
             locality=Locality(**d.get("locality", {})),
         )
-        for pid, d in FIXTURES.items()
+        for pid, d in fixtures.items()
     ]
     for p in seeds:
-        p.firmographic.employees_est = FIXTURES[p.prospect_id].get("employees")
+        p.firmographic.employees_est = fixtures[p.prospect_id].get("employees")
 
     adapters = {
         Stage.SCORE:   [PlacesAdapter(f("places")), WebsiteAdapter(f("website"))],
         Stage.CONFIRM: [
-            JobBoardAdapter(f("jobs")),
+            JobBoardAdapter(_jobs_fetch(f("jobs"), live_jobs)),
             ReviewAdapter(lambda p: [
-                (r["text"], r["url"]) for r in (FIXTURES[p.prospect_id].get("reviews") or [])
+                (r["text"], r["url"]) for r in (fixtures.get(p.prospect_id, {}).get("reviews") or [])
             ]),
             PPSAAdapter(f("ppsa")),
             RegistryAdapter(f("registry")),

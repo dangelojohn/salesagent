@@ -15,28 +15,44 @@ decorative. That is a silent, expensive failure -- it means every high-fit
 prospect passes the confidence gate regardless of evidence quality.
 
     python3 calibrate.py
+
+The corpus is data/ontario_real.json -- ten REAL Ontario cabinetry/millwork
+manufacturers, every fact sourced (see data/ontario_real_SOURCES.md). Fill in
+HAND_SCORED below with your own judgments, then re-run. Until you do, this
+prints the agent's decision + evidence per shop so you can score by hand.
 """
 
 from __future__ import annotations
 
 import statistics
 from dataclasses import dataclass
+from pathlib import Path
 
-from demo_run import build_pipeline
+from demo_run import build_pipeline, load_fixtures
 from salesagent import Decision, Prospect
 
+REAL_FIXTURES = Path(__file__).parent / "data" / "ontario_real.json"
+
 # --------------------------------------------------------------------------
-# Your hand judgments. Fill these in from a half-day of job-board + site
-# reading. This is the ground truth the agent is calibrated against.
+# YOUR hand judgments -- the ground truth the agent is calibrated against.
+#
+# TODO(you): score each of the ten real shops BY HAND from the sourced
+# evidence (data/ontario_real_SOURCES.md and the per-shop report this script
+# prints). Do NOT copy the agent's decision -- the whole point of the harness
+# is that your independent judgment disagrees with the agent 1-2 times in ten.
+# Uncomment and set each to Decision.BUILD / ENRICH / PARK / ARCHIVE.
 # --------------------------------------------------------------------------
 HAND_SCORED: dict[str, Decision] = {
-    "on-cab-0001": Decision.BUILD,     # Greystone: CNC + Cabinet Vision + Excel estimator post
-    "on-cab-0002": Decision.ARCHIVE,   # Northline: INNERGY rollout named in job post
-    "on-cab-0003": Decision.BUILD,     # Lakeside: US-domiciled, cross-border wedge
-    "on-cab-0004": Decision.ARCHIVE,   # Precision: Cyncly Insight on the website
-    "on-cab-0005": Decision.ARCHIVE,   # Bay Street: showroom, no shop floor
-    "on-cab-0006": Decision.ARCHIVE,   # Hollow Pine: ShopBot, too small
-    "on-cab-0007": Decision.ARCHIVE,   # Grand River: INNERGY case study
+    # "on-cab-r001": Decision.???,   # Deslaurier Custom Cabinets (Renfrew)
+    # "on-cab-r002": Decision.???,   # Laurysen Kitchens (Carleton Place)
+    # "on-cab-r003": Decision.???,   # Chervin Kitchen & Bath (Hawkesville)
+    # "on-cab-r004": Decision.???,   # AyA Kitchens and Baths (Mississauga)
+    # "on-cab-r005": Decision.???,   # Cartier Kitchens (Brampton)
+    # "on-cab-r006": Decision.???,   # Downsview Kitchens (Mississauga)
+    # "on-cab-r007": Decision.???,   # Muti Kitchen & Bath (Toronto)
+    # "on-cab-r008": Decision.???,   # Magnum Kitchens (Mississauga)
+    # "on-cab-r009": Decision.???,   # Bloomsbury Fine Cabinetry (Newmarket)
+    # "on-cab-r010": Decision.???,   # Tuscan Woodworks (North York)
 }
 
 SATURATION_CEILING = 0.98
@@ -55,13 +71,43 @@ class Row:
         return self.prospect.decision is self.expected
 
 
+def _print_agent_report(results: dict[str, Prospect]) -> None:
+    """The agent's read of each shop, with cited evidence -- score against this."""
+    print("=" * 78)
+    print("AGENT READ OF THE REAL CORPUS -- hand-score against this")
+    print("=" * 78)
+    for pid, p in sorted(results.items()):
+        print(f"\n{pid}  {p.company}")
+        print(f"    agent={p.decision.value:<8} fit={p.scores.fit_score:>3} "
+              f"conf={p.scores.absence_confidence:.2f} track={p.track.value} "
+              f"software={p.capability.software_tier.value} "
+              f"router={p.capability.router_tier.value}")
+        for r in p.dq_reasons:
+            print(f"    DQ: {r}")
+        for e in p.evidence[:4]:
+            print(f"    + {e.signal} (w={e.w}, c={e.c}) :: {e.matched_text[:56]!r}")
+        if len(p.evidence) > 4:
+            print(f"    ... {len(p.evidence) - 4} more cited signals")
+
+
 def main() -> int:
-    pl = build_pipeline()
+    fixtures = load_fixtures(REAL_FIXTURES)
+    pl = build_pipeline(fixtures, live_jobs=False)  # calibration is always offline
     results = {p.prospect_id: p for p in pl.run()}
+
+    _print_agent_report(results)
+
+    if not HAND_SCORED:
+        print("\n" + "-" * 78)
+        print("NOT CALIBRATED: HAND_SCORED is empty. Fill it in calibrate.py with")
+        print("YOUR judgments, then re-run to calibrate the weights.")
+        # Non-zero on purpose: an unscored corpus is NOT 'safe to run unattended'.
+        # Never let a green exit stand in for a calibration that never ran.
+        return 1
 
     rows = [Row(results[pid], exp) for pid, exp in HAND_SCORED.items() if pid in results]
 
-    print("=" * 74)
+    print("\n" + "=" * 74)
     print("CALIBRATION -- agent vs. hand-scored ground truth")
     print("=" * 74)
 
